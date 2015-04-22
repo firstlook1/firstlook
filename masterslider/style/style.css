@@ -1,0 +1,499 @@
+@charset "utf-8";
+/*-- main componant --*/
+
+
+
+  body {
+  width:100% ;
+  height:100%;
+  overflow:hidden;
+  }
+   .header {
+    position: absolute;
+    top: 0px !important;
+    width: 100%;
+    background: #fff;
+	height:45px;
+	line-height:45px;
+	z-index:2;
+	display:block;
+  }
+  .header img {
+  width:auto;
+  height:28px;
+  }
+
+
+ 
+  .header i {
+    padding: 20px 0px;
+    width: 100%;
+  }
+  .footer {
+    position: absolute;
+    top: 0px !important;
+    width: 100%;
+    background: #fff;
+	height:45px;
+	line-height:45px;
+	display:none;
+  }
+  .footer-drop {
+  position:absolute;
+  top:45px;
+  background:#f8f8f8;
+  width:100%;
+  padding:0px 0px;
+  display:none;
+  text-transform:uppercase;
+  height:45px;
+  line-height:45px;
+  }
+
+  .footer img {
+  width:auto;
+  height:40px;
+  }
+
+
+ 
+  .footer i {
+    padding: 20px 0px;
+    width: 100%;
+  }
+
+ 
+  .clear {
+    clear: both;
+  }
+  .m-top-30 {
+    height: 25px;
+  }
+ /*--- test style --*/
+ .ms-slide div img {
+ width:100%;
+ height:100%;
+ }
+ 
+ .caption {
+ background:#fff;
+ position:absolute;
+ bottom:0px;
+ color:#0493ce;
+ }
+ .ms-videogallery-template .ms-thumb-list.ms-dir-v {
+ right:-275px !important;
+ background:#fff;
+ width:230px !important;
+ padding:45px !important;
+ transition:all ease-out 0.4s;
+ }
+ .ms-videogallery-template .ms-thumb-list.ms-dir-v:hover {
+ right:0% !important;
+ }
+ .icon-active {
+ background:#EA504E;
+ }
+ #index .ms-slide .col-sm-4 img:hover {
+ opacity:0.2;
+ }
+ .aboutCaption {
+ position:fixed;
+ top:0px;
+ left:0px;
+ color:#fff;
+ text-align:center
+ }
+ .storyline {
+ background:none !important;
+ position:absolute;
+ color:#fff;
+ display:none;
+ vertical-align:middle;
+ margin-top:10px;
+ text-align:center;
+ margin-left:10px;
+ -webkit-transition: all 300ms ease-out;
+ -moz-transition: all 300ms ease-out;
+ -ms-transition: all 300ms ease-out;
+ -o-transition: all 300ms ease-out;
+ transition: all 300ms ease-out;
+ text-align:left
+ }
+ 
+ .close-back-btn {
+ background:url('video-close-btn.png')no-repeat center center ;
+ width:20px;
+ height:20px; 
+ padding:0px !important;
+ margin:0px !important;
+ position:absolute;
+ right:100px;
+ top:-50px;
+ z-index:2;
+ cursor:pointer;
+ }
+ .ms-slide-vcbtn {
+ 	width:30px;
+	height:30px;
+	background:url("../../img/light-skin-1.png") no-repeat scroll -24px -28px transparent;
+	position:absolute;
+    right:100px;
+    top:-50px;
+	cursor:pointer;
+	
+ }
+ 
+ 
+ .footer-icon {
+ float:left;
+ }
+ .footer-icon img {
+ height:25px !important;
+ margin-right:10px;
+ }
+ .header-icon img {
+ height:17px !important;
+ width:auto;
+ }
+ .ms-thumb h3, .ms-thumb h2 {
+ clear:both !important;
+ width:100%;
+ }
+ .ms-thumb img {
+ width:100%;
+ height:auto;
+ }
+ .ms-thumb-list.ms-dir-v .ms-thumb-frame img {
+ width:80% !important;
+ float:left;
+ }
+ .ms-videogallery-template .ms-thumb-list.ms-dir-v .ms-thumb-frame {
+ height:160px !important;
+ }
+ /*------- nav arrow style -------*/
+ .main-nav:after, .main-nav:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } .main-nav:after { border-color: rgba(136, 183, 213, 0); border-top-color: #000; border-width: 4px; margin-left: -4px; } .main-nav:before { border-color: rgba(194, 225, 245, 0); border-top-color: #000; border-width: 10px; margin-left: -10px; }
+ /*------- nav arrow style end ----*/
+
+.nav {
+color:#000;
+
+}
+/*------- 3d flip ---------------*/
+/* animation domination */
+.three-d {
+	-webkit-perspective: 200px;
+	-moz-perspective: 200px;
+	perspective: 200px;
+	-webkit-transition: all .07s linear;
+	-moz-transition: all .07s linear;
+	transition: all .07s linear;
+	position: relative;
+	cursor: pointer;
+}
+	/* complete the animation! */
+	.three-d:hover .three-d-box, 
+	.three-d:focus .three-d-box {
+		-webkit-transform: translateZ(-23px) rotateX(90deg);
+		-moz-transform: translateZ(-23px) rotateX(90deg);
+		transform: translateZ(-23px) rotateX(90deg);
+	}
+
+.three-d-box {
+	-webkit-transition: all .3s ease-out;
+	-webkit-transform: translatez(-23px);
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: all .3s ease-out;
+	-moz-transform: translatez(-23px);
+	-moz-transform-style: preserve-3d;
+	transition: all .3s ease-out;
+	transform: translatez(-23px);
+	transform-style: preserve-3d;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align:center;
+}
+.three-d-box img {
+position:relative;
+left:80%;
+}
+
+/* 
+	put the "front" and "back" elements into place with CSS transforms, 
+	specifically translation and translatez
+*/
+.front {
+	-webkit-transform: rotatex(0deg) translatez(23px);
+	-moz-transform: rotatex(0deg) translatez(23px);
+	transform: rotatex(0deg) translatez(23px);
+	background:#fff !important;
+	color:#000 !important;
+}
+
+.back {
+	-webkit-transform: rotatex(-90deg) translatez(23px);
+	-moz-transform: rotatex(-90deg) translatez(23px);
+	transform: rotatex(-90deg) translatez(23px);
+	color: #ffe7c4;
+}
+
+.front, .back {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: black;
+	padding: 0px 10px;
+	color: white;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+/*------- 3d flip end ---*/
+.footer-drop div:hover {
+background:#000;
+color:#fff;
+}
+.footer-drop a {
+color:#000;
+}
+.moving-arrow {
+position:absolute;
+top:50%;
+right:0px;
+width:45px;
+color:#fff
+}
+.moving-arrow{display: block; background: url('../../img/thin-blue-left-arrow.png') no-repeat right center; widht: 45px;}
+
+.moving-arrow {
+    background-position: 10% center;
+
+    -webkit-transition: background-position 0.3s linear;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: background-position 0.3s linear;  /* Firefox 4-15 */
+    -o-transition: background-position 0.3s linear;  /* Opera 10.50–12.00 */
+    transition: background-position 0.3s linear;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.moving-arrow {
+    background-position: 1% center;
+
+    -moz-animation: animatedBackground 0.8s infinite linear;
+    -o-animation: animatedBackground 0.8s infinite linear;
+    -webkit-animation: animatedBackground 0.8s infinite linear;
+    animation: animatedBackground 2s infinite linear;
+}
+
+@-moz-keyframes animatedBackground {
+    0% {
+        background-position: 100% center;
+		opacity:9;
+    }
+    100% {
+        background-position: 1% center;
+		opacity:0;
+    }
+}
+@-webkit-keyframes animatedBackground {
+    0% {
+        background-position: 100% center;
+		opacity:9;
+    }
+	50% {
+        background-position: 50% center;
+		opacity:3;
+    }
+    100% {
+        background-position: 1% center;
+		opacity:0;
+    }
+}
+@-o-keyframes animatedBackground {
+    0% {
+        background-position: 100% center;
+		opacity:9;
+    }
+    100% {
+        background-position: 1% center;
+		opacity:0;
+    }
+}
+@-ms-keyframes animatedBackground {
+    0% {
+        background-position: 100% center;
+		opacity:9;
+    }
+    100% {
+        background-position: 1% center;
+		opacity:0;
+    }
+}
+@keyframes animatedBackground {
+    0% {
+        background-position: 100% center;
+		opacity:9;
+    }
+	50% {
+        background-position: 50% center;
+		opacity:3;
+    }
+    100% {
+        background-position: 1% center;
+		opacity:0;
+    }
+}
+.caption img {
+width:18px !important;
+height:18px !important;
+float:right;
+margin-right:10px;
+}
+.caption span {
+float:right;
+font-weight:bold;
+margin-right:25px;
+}
+#index .ms-videogallery-template.ms-videogallery-vertical-template {
+padding-right:0px !important;
+margin-top:45px !important;
+}
+.ms-videogallery-template.ms-videogallery-vertical-template  {
+padding-right:0px !important;
+}
+.ms-videogallery-template {
+max-width:100% !important;
+}
+.overlay {
+color:#red !important;
+background:#000;
+width:100%;
+height:100%;
+margin:0px;
+padding:0px;
+opacity:0.5;
+}
+.bgBlack {
+background:#000;
+}
+.AbFooter {
+position:absolute;
+bottom:0px;
+background:#fff;
+height:25px;
+line-height:25px;
+width:100%;
+font-size:12px;
+}
+.right-align {
+text-align:right;
+}
+.ms-videogallery-template .ms-thumb-list.ms-dir-v .ms-thumb-frame h3 {
+width:100%;
+margin:0px;
+padding:0px;
+}
+.ms-videogallery-template .ms-thumb-list.ms-dir-v .ms-thumb-ol {
+width:80%;
+}
+
+#copyright-window, #designer-window {
+	display:none;
+	width:50%;
+	height:auto;
+	background:#fff;
+	margin:0px auto;
+	padding:2%;
+	cursor:-moz-zoom-out;
+	cursor:-webkit-zoom-out;
+	text-align:center;
+	font-size:2.4em;
+	font-family: 'Open Sans';
+	font-weight: 300;	
+	
+}
+#copyright, #designer {
+cursor:-moz-zoom-in;
+cursor:-webkit-zoom-in;
+}
+
+#designer-window i {
+	color:#F00;
+}
+.search-bar input {
+background:url('../../img/search-icon.png') 5px center no-repeat ;
+background-image:20px;
+border:0px;
+float:left;
+border:1px solid #ccc;
+height:25px;
+margin-top:8px;
+border-radius:5px;
+padding:0px 30px;
+width:100%
+}
+.search-bar {
+margin-right:45px;
+padding:0px;
+}
+.details {
+margin-top:10px !important;
+width:800px;
+margin:0px auto;
+color:#fff;
+}
+.active {
+background:#000 !important;
+color:#fff;
+padding:0px 2%;
+}
+.ms-thumb img {
+margin:0px 0px !important;
+}
+
+.active .back {
+	-webkit-transform: rotatex(0deg) translatez(23px);
+	-moz-transform: rotatex(0deg) translatez(23px);
+	transform: rotatex(0deg) translatez(23px);
+	background:#000 !important;
+	color:#fff !important;
+}
+
+.active .front {
+	-webkit-transform: rotatex(-90deg) translatez(23px);
+	-moz-transform: rotatex(-90deg) translatez(23px);
+	transform: rotatex(-90deg) translatez(23px);
+	background:#000 !important;
+	color:#fff !important;
+}
+
+
+
+
+@media only screen and (min-width: 769px) {
+.header {
+display:none;
+}
+.footer {
+display:block;
+}
+.ms-slide .col-sm-4 {
+ padding:0%;
+ padding-bottom:0%;
+ width:33%;
+ overflow:hidden;
+ }
+
+ }
+
+
+ 
+
+
+
+/* -- transition effect end here --*/
